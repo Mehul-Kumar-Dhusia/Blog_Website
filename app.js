@@ -33,17 +33,17 @@ app.get("/" , function(req ,res){
   })
 })
 
-app.get("/about" , function(req,res){
-  res.render("about" , {about : aboutContent})
-})
+// app.get("/about" , function(req,res){
+//   res.render("about" , {about : aboutContent})
+// })
 
-app.get("/contact" , function(req,res){
-  res.render("contact" , {contact : contactContent})
-})
+// app.get("/contact" , function(req,res){
+//   res.render("contact" , {contact : contactContent})
+// })
 
-app.get("/compose" , function(req,res){
-  res.render("compose")
-})
+// app.get("/compose" , function(req,res){
+//   res.render("compose")
+// })
 
 app.get("/posts/:topic" , function(req , res){
   const requestTopic = _.lowerCase(req.params.topic)
@@ -64,14 +64,14 @@ app.get("/posts/:topic" , function(req , res){
   })
 })
 
-app.post("/compose" , function(req , res){
-  const newPost = new postCollection({
-    postTitle : req.body.postTitle , 
-    postBody : req.body.postBody
-  })
-  newPost.save()
-  res.redirect("/")
-})
+// app.post("/compose" , function(req , res){
+//   const newPost = new postCollection({
+//     postTitle : req.body.postTitle , 
+//     postBody : req.body.postBody
+//   })
+//   newPost.save()
+//   res.redirect("/")
+// })
 
 app.post("/delete" , function(req , res){
   let value = req.body.btn 
