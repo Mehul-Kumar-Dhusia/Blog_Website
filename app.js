@@ -28,7 +28,7 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 app.get("/" , function(req ,res){
   postCollection.find({} , function(err,data){
     if(!err){
-      res.render("home" , {homedata : homeStartingContent , posts : data})
+      res.render("index" , {homedata : homeStartingContent , posts : data})
     }
   })
 })
